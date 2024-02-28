@@ -59,5 +59,12 @@ public class Product {
     @Column(name = "update_date")
     private Date updateDate;
 
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+
+    @ManyToOne
+    @JoinColumn(name = "brand_id")
+    private Brand brand;
 
 }

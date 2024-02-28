@@ -46,4 +46,8 @@ public class Discount {
     @Column(name = "coupon_code")
     private String couponCode;
 
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
+
 }
