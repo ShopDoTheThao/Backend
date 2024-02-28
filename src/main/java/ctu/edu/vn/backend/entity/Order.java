@@ -9,7 +9,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "order")
+@Table(name = "userOrder")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
