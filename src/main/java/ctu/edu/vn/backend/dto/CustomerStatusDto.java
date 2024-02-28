@@ -1,5 +1,6 @@
 package ctu.edu.vn.backend.dto;
 
+import lombok.Data;
 import lombok.Value;
 
 import java.io.Serializable;
@@ -7,7 +8,7 @@ import java.io.Serializable;
 /**
  * DTO for {@link ctu.edu.vn.backend.entity.CustomerStatus}
  */
-@Value
+@Data
 public class CustomerStatusDto implements Serializable {
     Long id;
     String name;
