@@ -16,6 +16,25 @@ public class Customer {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
+
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
+
+    @Temporal(TemporalType.DATE)
+    @Column(name = "birth_date")
+    private Date birthDate;
+
+    @Column(name = "password", nullable = false)
+    private String password;
+
+    @Column(name = "phone", nullable = false)
+    private String phone;
+
+    @Column(name = "email", nullable = false)
+    private String email;
+
     @Temporal(TemporalType.DATE)
     @Column(name = "register_date")
     private Date registerDate;
