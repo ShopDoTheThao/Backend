@@ -22,4 +22,13 @@ public class Address {
 
     @Column(name = "is_default", nullable = false)
     private Boolean isDefault;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
+
 }

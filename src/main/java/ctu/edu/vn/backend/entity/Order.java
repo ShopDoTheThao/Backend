@@ -35,4 +35,9 @@ public class Order {
     @Temporal(TemporalType.DATE)
     @Column(name = "update_at")
     private Date updateAt;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+
 }

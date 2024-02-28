@@ -29,4 +29,17 @@ public class Item {
 
     @Column(name = "size", nullable = false)
     private String size;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
+
+    @ManyToOne
+    @JoinColumn(name = "shopping_cart_id")
+    private ShoppingCart shoppingCart;
+
 }
