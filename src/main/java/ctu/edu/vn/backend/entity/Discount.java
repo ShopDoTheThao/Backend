@@ -46,7 +46,7 @@ public class Discount {
     @Column(name = "coupon_code")
     private String couponCode;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
     @JoinColumn(name = "product_id")
     private Product product;
 
