@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -31,5 +33,8 @@ public class Brand {
 
     @Column(name = "is_active", nullable = false)
     private Boolean isActive;
+
+    @OneToMany(mappedBy = "brand", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Product> products = new LinkedHashSet<>();
 
 }
