@@ -1,6 +1,7 @@
 package ctu.edu.vn.backend.controller;
 
 import ctu.edu.vn.backend.dto.BrandDto;
+import ctu.edu.vn.backend.entity.Brand;
 import ctu.edu.vn.backend.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,11 +21,25 @@ public class BrandController {
     }
 
     @PostMapping
-    public ResponseEntity<?> saveBrand(BrandDto dto){
+    public ResponseEntity<?> saveBrand(@RequestBody BrandDto dto){
         return new ResponseEntity<>(brandService.BrandSave(dto), HttpStatus.CREATED);
     }
     @GetMapping("/{name}")
     public ResponseEntity<?> getBrandByName(@PathVariable String name){
         return new ResponseEntity<>(brandService.findBrandByName(name), HttpStatus.OK);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteBrandById(@PathVariable Long id){
+        brandService.deleteById(id);
+        return new ResponseEntity<>("Brand delete successfully", HttpStatus.OK);
+    }
+
+    @GetMapping()
+    public ResponseEntity<?> getAllBrand(){
+        return new ResponseEntity<>(brandService.findAll(), HttpStatus.OK);
+    }
+
+
+
 }
