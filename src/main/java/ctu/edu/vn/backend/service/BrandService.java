@@ -12,17 +12,17 @@ import java.util.List;
 import java.util.Optional;
 
 public interface BrandService {
-    public List<Brand> findBrandByName(String name);
+    List<Brand> findBrandByName(String name);
 
-    public Brand BrandSave(BrandDto brandDto);
+    Brand BrandSave(BrandDto dto);
 
-    public List<Brand> findAll();
+    List<Brand> findAll();
 
-    public Page<Brand> findAll(Pageable pageable);
+    Page<Brand> findAll(Pageable pageable);
 
-    public Optional<Brand> findById(Long id);
+    Optional<Brand> findById(Long id);
 
-    public void deleteById(Long id);
+    void deleteById(Long id);
 
-    public Brand updateBrand(Long id, Brand entity);
+    Brand updateBrand(Long id, Brand entity);
 }
