@@ -44,12 +44,5 @@ public class CategoryController {
         return new ResponseEntity<>(this.categoryService.save(dto), HttpStatus.CREATED);
     }
 
-//    @GetMapping("/page")
-//    public ResponseEntity<Page<Category>> getAllCategory(
-//            @PageableDefault(size = 5, sort = "name", direction = Sort.Direction.ASC) Pageable pageable) {
-//        Page<Category> categories = categoryService.findAll(pageable);
-//        return new ResponseEntity<>(categories, HttpStatus.OK);
-//    }
-
 
 }
