@@ -32,7 +32,7 @@ public class Address {
     private Customer customer;
 
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}, orphanRemoval = true)
-    @JoinColumn(name = "city_id")
+    @JoinColumn(name = "city_id", nullable = true)
     private City city;
 
 }

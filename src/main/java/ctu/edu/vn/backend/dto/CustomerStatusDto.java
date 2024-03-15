@@ -10,7 +10,6 @@ import java.io.Serializable;
  */
 @Data
 public class CustomerStatusDto implements Serializable {
-    Long id;
     String name;
     Boolean isActive;
     Boolean isDefault;
